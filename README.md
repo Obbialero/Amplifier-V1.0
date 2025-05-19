@@ -1,148 +1,146 @@
-# 🔊 Amplificatore Audio con Controllo Digitale del Volume (MAX5488 + TDA7377)
+# 🔊 Audio Amplifier with Digital Volume Control (MAX5488 + TDA7377)
 
-**Versione:** 1.0  
-**Autore:** Obbialero Andrea  
-**Data:** 27/01/2024  
-
----
-
-## 📌 Descrizione del Progetto
-
-Questo progetto consiste nella realizzazione di un amplificatore audio stereo a 4 canali con controllo digitale del volume tramite interfaccia SPI, interamente integrato su un unico PCB.
-
-### Componenti principali:
-- **MAX5488**: potenziometro digitale controllato via SPI
-- **TDA7377**: amplificatore di potenza per uscita audio
-- Alimentazione separata per sezione logica e amplificazione
+**Version:** 1.0  
+**Author:** Obbialero Andrea  
+**Date:** 27/01/2024  
 
 ---
 
-## 🔧 Specifiche Tecniche
+## 📌 Project Overview
 
-| Caratteristica     | Valore                          |
-|--------------------|---------------------------------|
-| Canali Audio       | 4 (stereo ×2)                   |
-| Amplificatore      | TDA7377                         |
-| Controllo Volume   | Digitale via SPI (MAX5488)      |
-| Alimentazioni      | +24V, +12V, +5V                 |
-| Regolatori         | XL4016 (Buck), LM7805 (Lineare) |
-| Ingressi Audio     | Jack PJ-3200                    |
-| Uscite Audio       | Connettori 4 pin                |
-| PCB                | Progettato da zero              |
+This project features a 4-channel stereo audio amplifier with digital volume control via SPI, fully integrated on a single PCB.
+
+### Main Components:
+- **MAX5488** – Digital potentiometer controlled via SPI  
+- **TDA7377** – Power amplifier for audio output  
+- Separate power supplies for logic and amplification sections
 
 ---
 
-## 📦 Distinta Base (BOM)
+## 🔧 Technical Specifications
 
-Consulta la [Distinta Base completa](https://github.com/Obbialero/Amplifier-V1.0/blob/main/hardware/BOM_PCB_AMPLIFIER_V1.0.csv) per tutti i componenti utilizzati, comprensivi di codici, valori e note tecniche.
-
-
----
-
-## 🔌 Schema a Blocchi
-
-![Schema a Blocchi](docs/schema_a_blocchi_pcb.png)
-
----
-
-## 🎚️ Controllo Volume Digitale (SPI)
-
-Il controllo del volume è gestito dal **MAX5488**, un doppio potenziometro digitale che consente la regolazione separata dei canali audio **destro (DX)** e **sinistro (SX)**.
-
-Nel progetto è utilizzato un **microcontrollore STM32L432KC** (linea STM32 a basso consumo di STMicroelectronics) per pilotare il MAX5488 tramite interfaccia **SPI**.  
-Tuttavia, il dispositivo è compatibile con qualsiasi microcontrollore dotato di interfaccia SPI, come **Arduino**, **ESP32**, **Raspberry Pi Pico** o simili.
-
-### 🧪 Interfaccia SPI – Segnali utilizzati:
-
-| Segnale | Descrizione             |
-|---------|--------------------------|
-| **SCLK** | Clock seriale            |
-| **DIN**  | Dati seriali in ingresso |
-| **CS#**  | Chip Select (attivo basso) |
-
-Il MAX5488 mantiene l'ultimo valore impostato anche in assenza di segnale SPI, rendendolo ideale per applicazioni audio embedded dove si desidera un controllo software preciso e persistente.
+| Feature            | Value                             |
+|--------------------|------------------------------------|
+| Audio Channels     | 4 (stereo ×2)                      |
+| Amplifier          | TDA7377                            |
+| Volume Control     | Digital via SPI (MAX5488)          |
+| Power Supplies     | +24V, +12V, +5V                    |
+| Regulators         | XL4016 (Buck), LM7805 (Linear)     |
+| Audio Inputs       | PJ-3200 Jack                       |
+| Audio Outputs      | 4-pin Connectors                   |
+| PCB                | Custom-designed from scratch       |
 
 ---
 
-## 🧱 Filtraggio e Protezione
+## 📦 Bill of Materials (BOM)
 
-| Componente         | Funzione                                  |
-|--------------------|-------------------------------------------|
-| LC Filter          | 47 µH + 100nF–1000µF su linee Vcc          |
-| Diodo Schottky     | VS-10BQ040-M3 su linea +24V               |
-| Diodo 1N4148       | Protezione segnali digitali               |
-| Condensatori       | Di bypass, ravvicinati ai pin di alimentazione |
+See the [complete BOM](https://github.com/Obbialero/Amplifier-V1.0/blob/main/hardware/BOM_PCB_AMPLIFIER_V1.0.csv) for all components used, including part numbers, values, and technical notes.
 
 ---
 
-## 📎 Connettori
+## 🔌 Block Diagram
 
-| Componente | Funzione                  |
-|------------|---------------------------|
-| PJ-3200    | Ingresso audio stereo     |
-| U11/U13    | Connettori audio 4 pin    |
-| P11        | Ingresso alimentazione    |
+![Block Diagram](docs/schema_a_blocchi_pcb.png)
 
 ---
 
-## 🛠️ Raccomandazioni PCB
+## 🎚️ Digital Volume Control (SPI)
 
-- Tracce di potenza (24V/12V): ≥2 mm di larghezza  
-- Separazione masse: PW-GND (potenza) e S-GND (segnale) ben distinte  
-- Linee SPI: il più corte possibile per minimizzare interferenze  
-- Condensatori bulk: montati vicino a XL4016 e TDA7377  
+The volume is controlled via the **MAX5488**, a dual digital potentiometer that enables separate adjustment for the **right (DX)** and **left (SX)** audio channels.
+
+This project uses an **STM32L432KC microcontroller** (low-power STM32 series from STMicroelectronics) to control the MAX5488 via **SPI**.  
+However, the system is compatible with any SPI-capable microcontroller such as **Arduino**, **ESP32**, **Raspberry Pi Pico**, etc.
+
+### 🧪 SPI Interface – Signals Used:
+
+| Signal   | Description               |
+|----------|---------------------------|
+| **SCLK** | Serial Clock              |
+| **DIN**  | Serial Data Input         |
+| **CS#**  | Chip Select (active low)  |
+
+The MAX5488 retains the last set value even when the SPI signal is inactive, making it ideal for embedded audio systems requiring precise and persistent software control.
 
 ---
 
-## 📁 File Inclusi
+## 🧱 Filtering and Protection
 
-- [Gerber_PCB_AMPLIFIER_V1.0.zip](https://github.com/Obbialero/Amplifier-V1.0/raw/main/Gerber_PCB_AMPLIFIER_V1.0.zip) – File Gerber per produzione PCB  
-- [BOM_PCB_AMPLIFIER_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/BOM_PCB_AMPLIFIER_V1.0.csv) – Distinta base dei componenti  
-- [PickAndPlace_PCB_amplifier_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/PickAndPlace_PCB_amplifier_V1.0.csv) – Coordinate per montaggio automatico  
-- [PCB_amplifier_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/PCB_amplifier_V1.0.json) – Schema PCB (JSON)  
-- [SCH_AMPLIFIER_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/SCH_AMPLIFIER_V1.0.json) – Schema elettrico (JSON)  
-- [PNG_AMPLIFIER/](https://github.com/Obbialero/Amplifier-V1.0/tree/main/docs/PNG_AMPLIFIER) – Cartella contenente le immagini del PCB e schematici  
+| Component         | Function                                  |
+|-------------------|-------------------------------------------|
+| LC Filter         | 47 µH + 100nF–1000µF on Vcc lines          |
+| Schottky Diode    | VS-10BQ040-M3 on +24V line                |
+| 1N4148 Diode      | Protection for digital signals            |
+| Capacitors        | Bypass, placed close to power pins        |
 
 ---
 
-## 🖼️ Immagini e PCB
+## 📎 Connectors
 
-### 🔧 Schema elettrico
+| Component | Function                  |
+|-----------|---------------------------|
+| PJ-3200   | Stereo audio input        |
+| U11/U13   | 4-pin audio output        |
+| P11       | Power input               |
+
+---
+
+## 🛠️ PCB Design Recommendations
+
+- Power traces (24V/12V): ≥2 mm width  
+- Ground separation: keep PW-GND (power) and S-GND (signal) isolated  
+- SPI lines: keep as short as possible to reduce noise  
+- Bulk capacitors: placed near XL4016 and TDA7377
+
+---
+
+## 📁 Included Files
+
+- [Gerber_PCB_AMPLIFIER_V1.0.zip](https://github.com/Obbialero/Amplifier-V1.0/raw/main/Gerber_PCB_AMPLIFIER_V1.0.zip) – Gerber files for PCB production  
+- [BOM_PCB_AMPLIFIER_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/BOM_PCB_AMPLIFIER_V1.0.csv) – Bill of Materials  
+- [PickAndPlace_PCB_amplifier_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/PickAndPlace_PCB_amplifier_V1.0.csv) – Pick & place coordinates for assembly  
+- [PCB_amplifier_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/PCB_amplifier_V1.0.json) – PCB layout (JSON format)  
+- [SCH_AMPLIFIER_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/SCH_AMPLIFIER_V1.0.json) – Electrical schematic (JSON format)  
+- [PNG_AMPLIFIER/](https://github.com/Obbialero/Amplifier-V1.0/tree/main/docs/PNG_AMPLIFIER) – Folder with schematic and PCB images  
+
+---
+
+## 🖼️ Images and PCB Views
+
+### 🔧 Electrical Schematic  
 ![Schematic_PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/raw/main/docs/PNG_AMPLIFIER/Schematic_PCB_AMPLIFIER_V1.0.png)
 
-### 📐 PCB - Layout 2D
-![Schematic_PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/blob/main/docs/PNG_AMPLIFIER/2D_PCB_AMPLIFIER_V1.0.png)
+### 📐 PCB - 2D Layout  
+![2D_PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/blob/main/docs/PNG_AMPLIFIER/2D_PCB_AMPLIFIER_V1.0.png)
 
-### 🖥️ PCB - Vista assemblata
+### 🖥️ PCB - Assembled View  
 ![PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/blob/main/docs/PNG_AMPLIFIER/PCB_AMPLIFIER_V1.0.png)
 
 ---
 
-## ⚠️ Avvertenze
+## ⚠️ Warnings
 
-⚠️ Attenzione: la linea da 24V può generare surriscaldamento.  
-Utilizzare dissipatori su **XL4016** e **TDA7377** per evitare thermal shutdown.  
-Assicurarsi che le masse siano ben collegate e le connessioni audio schermate.
-
----
-
-## 📌 Consigli d’Uso
-
-- Fornire un'alimentazione stabilizzata adeguata alle specifiche del TDA7377  
-- Verificare sempre l’integrità del circuito prima della produzione in serie  
-- Utilizzare un cabinet schermato per evitare interferenze audio  
+⚠️ Caution: the 24V line may cause overheating.  
+Use heatsinks on **XL4016** and **TDA7377** to avoid thermal shutdown.  
+Ensure proper grounding and shielded audio connections.
 
 ---
 
-## 📬 Contatti
+## 📌 Usage Tips
 
-Per dubbi, miglioramenti o segnalazioni:  
+- Provide a stable power supply according to TDA7377 specs  
+- Always verify circuit integrity before mass production  
+- Use a shielded enclosure to reduce audio interference  
+
+---
+
+## 📬 Contact
+
+For questions, improvements, or issues:  
 **Andrea Obbialero** – https://obbialero.github.io/
 
 ---
 
-## 📘 Licenza
+## 📘 License
 
-Questo progetto è rilasciato sotto licenza **MIT**.  
-Libero per uso personale, educativo e commerciale con attribuzione.
-
+This project is licensed under the **MIT License**.  
+Free for personal, educational, and commercial use with attribution.
