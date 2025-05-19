@@ -24,7 +24,7 @@ PCB	Progettato da zero
 ---
 
 ## 📦 Distinta Base (BOM)
-Consulta la distinta base completa (distinta_base.xlsx) per il dettaglio di tutti i componenti, comprensivi di valori, package, codici e note di montaggio.
+Consulta la [Distinta Base completa](./BOM_PCB_AMPLIFIER_V1.0.csv) per tutti i componenti utilizzati, comprensivi di codici, valori e note tecniche.
 
 ---
 
