@@ -34,7 +34,8 @@ Questo progetto consiste nella realizzazione di un amplificatore audio stereo a 
 
 ## 📦 Distinta Base (BOM)
 
-Consulta la [Distinta Base completa](./BOM_PCB_AMPLIFIER_V1.0.csv) per tutti i componenti utilizzati, comprensivi di codici, valori e note tecniche.
+Consulta la [Distinta Base completa](https://github.com/Obbialero/Amplifier-V1.0/blob/main/hardware/BOM_PCB_AMPLIFIER_V1.0.csv) per tutti i componenti utilizzati, comprensivi di codici, valori e note tecniche.
+
 
 ---
 
@@ -95,25 +96,25 @@ Il MAX5488 mantiene l'ultimo valore impostato anche in assenza di segnale SPI, r
 
 ## 📁 File Inclusi
 
-- `Gerber_PCB_AMPLIFIER_V1.0.zip` – File Gerber per produzione PCB  
-- `BOM_PCB_AMPLIFIER_V1.0.csv` – Distinta base dei componenti  
-- `PickAndPlace_PCB_amplifier_V1.0.csv` – Coordinate per montaggio automatico  
-- `pcb_amplifier_schematich/PCB_amplifier_V1.0.json` – Schema PCB (JSON)  
-- `pcb_amplifier_schematich/SCH_AMPLIFIER_V1.0.json` – Schema elettrico (JSON)  
-- `PNG_AMPLIFIER/` – Cartella contenente le immagini del PCB e schematici  
+- [Gerber_PCB_AMPLIFIER_V1.0.zip](https://github.com/Obbialero/Amplifier-V1.0/raw/main/Gerber_PCB_AMPLIFIER_V1.0.zip) – File Gerber per produzione PCB  
+- [BOM_PCB_AMPLIFIER_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/BOM_PCB_AMPLIFIER_V1.0.csv) – Distinta base dei componenti  
+- [PickAndPlace_PCB_amplifier_V1.0.csv](https://github.com/Obbialero/Amplifier-V1.0/raw/main/PickAndPlace_PCB_amplifier_V1.0.csv) – Coordinate per montaggio automatico  
+- [PCB_amplifier_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/PCB_amplifier_V1.0.json) – Schema PCB (JSON)  
+- [SCH_AMPLIFIER_V1.0.json](https://github.com/Obbialero/Amplifier-V1.0/raw/main/pcb_amplifier_schematich/SCH_AMPLIFIER_V1.0.json) – Schema elettrico (JSON)  
+- [PNG_AMPLIFIER/](https://github.com/Obbialero/Amplifier-V1.0/tree/main/docs/PNG_AMPLIFIER) – Cartella contenente le immagini del PCB e schematici  
 
 ---
 
 ## 🖼️ Immagini e PCB
 
 ### 🔧 Schema elettrico
-![Schematic_PCB_AMPLIFIER_V1.0](PNG_AMPLIFIER/Schematic_PCB_AMPLIFIER_V1.0.png)
+![Schematic_PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/raw/main/docs/PNG_AMPLIFIER/Schematic_PCB_AMPLIFIER_V1.0.png)
 
 ### 📐 PCB - Layout 2D
-![2D_PCB_AMPLIFIER_V1.0](PNG_AMPLIFIER/2D_PCB_AMPLIFIER_V1.0.png)
+![Schematic_PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/blob/main/docs/PNG_AMPLIFIER/2D_PCB_AMPLIFIER_V1.0.png)
 
 ### 🖥️ PCB - Vista assemblata
-![PCB_AMPLIFIER_V1.0](PNG_AMPLIFIER/PCB_AMPLIFIER_V1.0.png)
+![PCB_AMPLIFIER_V1.0](https://github.com/Obbialero/Amplifier-V1.0/blob/main/docs/PNG_AMPLIFIER/PCB_AMPLIFIER_V1.0.png)
 
 ---
 
