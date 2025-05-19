@@ -1,22 +1,21 @@
-| ID  | Name                | Designator                       | Footprint                            | Quantity | Manufacturer Part             | Manufacturer               | Supplier | Supplier Part | Price  | Pins | Contributor       | JLCPCB Part Class | image |
-|-----|---------------------|----------------------------------|---------------------------------------|----------|-------------------------------|----------------------------|----------|----------------|--------|------|-------------------|--------------------|--------|
-| 1   | 47uF                | C1                               | CAP-SMD_L3.2-W1.6                    | 1        | CA45-A-10V-47uF-M             | CEC(振华新云)              | LCSC     | C688949        | 0.137  | 2    | LCSC              | Extended Part      |        |
-| 2   | 1uF                 | C2,C3                            | C0603                                | 2        | CL10A105KO8NNNC               | SAMSUNG(三星)             | LCSC     | C1592          | 0.003  | 2    |                   | Extended Part      |        |
-| 3   | 1000uF              | C4,C10                           | CAP-SMD_BD10.0-L10.3-W10.3-LS11.3-FD | 2        | 189RV0034                     | KNSCHA(科尼盛)             | LCSC     | C7471896       | 0.236  | 2    | lcsc              | Extended Part      |        |
-| 4   | 100nF               | C5,C7,C9,C11,C12,C13,C14,C15,C17 | C0805                                | 9        | CT41G-0805-2X1-50V-0.1μF-M(N) | TORCH(火炬)                | LCSC     | C138340        | 0.008  | 2    | LCSC              | Extended Part      |        |
-| 5   | 33nF                | C6                               | C1206                                | 1        | GCM3195C1H333JA16D            | muRata(村田)               | LCSC     | C435395        | 0.199  | 2    | LCSC              | Extended Part      |        |
-| 6   | 470uF               | C8                               | CAP-SMD_BD8.0-L8.3-W8.3-FD           | 1        | RST470UF25V032                | KNSCHA(科尼盛)             | LCSC     | C4747956       | 0.073  | 2    | lcsc              | Extended Part      |        |
-| 7   | 220nF               | C16                              | CAP-SMD_L3.2-W1.6-FD                 | 1        | CA45A-A-35V-0.22UF-K          | CEC(振华新云)              | LCSC     | C3202857       | 0.083  | 2    | lcsc              | Extended Part      |        |
-| 8   | VS-10BQ040-M3       | D1                               | SMB_L4.3-W3.6-LS5.3-RD               | 1        | VS-10BQ040-M3/5BT             | VISHAY(威世)               | LCSC     | C468040        | 0.130  | 2    | LCSC              | Extended Part      |        |
-| 9   | 1N4148W T4          | D2                               | SOD-123_L2.8-W1.8-LS3.7-RD           | 1        | 1N4148W                       | CJ(江苏长电/长晶)          | LCSC     | C2099          | 0.009  | 2    | 立创EDA官方封装库 | Extended Part      |        |
-| 10  | 47uH                | L1                               | IND-SMD_L4.5-W4.0                    | 1        | CY43-47UH                     | SHOU HAN(首韩)             | LCSC     | C2929422       | 0.037  | 2    | lcsc              | Extended Part      |        |
-| 11  | POWER               | P11                              | CONN-TH_2P-P5.00                     | 1        |                               |                          | LCSC     |                |        | 2    | LCEDA_Lib         |                    |        |
-| 12  | 10kΩ                | R1                               | R0603                                | 1        | 0603WAJ0103T5E                | UNI-ROYAL(厚声)            | LCSC     | C15401         | 0.001  | 2    |                   | Extended Part      |        |
-| 13  | 13kΩ                | R2                               | R0603                                | 1        | 0603WAF1302T5E                | UNI-ROYAL(厚声)            | LCSC     | C22797         | 0.001  | 2    |                   | Basic Part         |        |
-| 14  | 1.5kΩ               | R3                               | R0603                                | 1        | 0603WAF1501T5E                | UNI-ROYAL(厚声)            | LCSC     | C22843         | 0.001  | 2    |                   | Basic Part         |        |
-| 15  | LM7805MPX/NOPB      | U1                               | SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR   | 1        | LM7805MPX/NOPB                | TI(德州仪器)               | LCSC     | C2848241       | 1.273  | 4    | LCSC              | Extended Part      |        |
-| 16  | PJ-3200             | U3                               | AUDIO-TH_PJ-3200                     | 1        | PJ-3200                       | XKB Connectivity(中国星坤) | LCSC     | C2689690       | 0.055  | 3    | LCSC              | Extended Part      |        |
-| 17  | S4B-PH-K-S-(LF)(SN) | U11,U13                          | CONN-TH_4P-P2.00_S4B-PH-K-S-LF-SN    | 2        | S4B-PH-K-S(LF)(SN)            | JST                        | LCSC     | C157926        | 0.050  | 4    | LCSC              | Extended Part      |        |
-| 18  | MAX5488EUD+         | U23                              | TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL    | 1        | MAX5488EUD+                   | ADI/Maxim(亚德诺/美信)      | LCSC     | C5328764       | 9.997  | 14   | lcsc              | Extended Part      |        |
-| 19  | XL4016E1            | U26                              | TO-220-5L_L10.2-W4.5-P1.71-L         | 1        | XL4016E1                      | XLSEMI(芯龙)               | LCSC     | C55881         | 0.997  | 5    |                   | Extended Part      |        |
-| 20  | E-TDA7377           | U41                              | MULTIWATT-15_L19.6-W5.0-P1.27-L      | 1        | E-TDA7377                     | ST(意法半导体)             | LCSC     | C262884        | 1.916  | 15   | LCSC              | Extended Part      |        |
+Rif,Componente,Valore / Tipo,Quantità,Codice / Standard,Note Tecniche
+C1,47uF,CA45-A-10V-47uF-M,1,C688949,CAP-SMD_L3.2-W1.6
+"C2,C3",1uF,CL10A105KO8NNNC,2,C1592,C0603
+"C4,C10",1000uF,189RV0034,2,C7471896,CAP-SMD_BD10.0-L10.3-W10.3-LS11.3-FD
+"C5,C7,C9,C11,C12,C13,C14,C15,C17",100nF,CT41G-0805-2X1-50V-0.1μF-M(N),9,C138340,C0805
+C6,33nF,GCM3195C1H333JA16D,1,C435395,C1206
+C8,470uF,RST470UF25V032,1,C4747956,CAP-SMD_BD8.0-L8.3-W8.3-FD
+C16,220nF,CA45A-A-35V-0.22UF-K,1,C3202857,CAP-SMD_L3.2-W1.6-FD
+D1,VS-10BQ040-M3,VS-10BQ040-M3/5BT,1,C468040,SMB_L4.3-W3.6-LS5.3-RD
+D2,1N4148W T4,1N4148W,1,C2099,SOD-123_L2.8-W1.8-LS3.7-RD
+L1,47uH,CY43-47UH,1,C2929422,IND-SMD_L4.5-W4.0
+P11,POWER,,1,,CONN-TH_2P-P5.00
+R1,10kΩ,0603WAJ0103T5E,1,C15401,R0603
+R2,13kΩ,0603WAF1302T5E,1,C22797,R0603
+R3,1.5kΩ,0603WAF1501T5E,1,C22843,R0603
+U1,LM7805MPX/NOPB,LM7805MPX/NOPB,1,C2848241,SOT-223-4_L6.5-W3.5-P2.30-LS7.0-BR
+U3,PJ-3200,PJ-3200,1,C2689690,AUDIO-TH_PJ-3200
+"U11,U13",S4B-PH-K-S-(LF)(SN),S4B-PH-K-S(LF)(SN),2,C157926,CONN-TH_4P-P2.00_S4B-PH-K-S-LF-SN
+U23,MAX5488EUD+,MAX5488EUD+,1,C5328764,TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
+U26,XL4016E1,XL4016E1,1,C55881,TO-220-5L_L10.2-W4.5-P1.71-L
+U41,E-TDA7377,E-TDA7377,1,C262884,MULTIWATT-15_L19.6-W5.0-P1.27-L
